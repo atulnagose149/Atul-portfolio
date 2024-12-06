@@ -1,0 +1,85 @@
+/* Default styles */
+.testimonial .swiper {
+    max-width: 1100px;
+    height: 400px;
+    margin: 0px;
+    --swiper-theme-color: #8266ff;
+}
+
+.testimonial .swiper-slide {
+    width: fit-content;
+    flex-shrink: 0;
+    display: block;
+    margin-right: 0px;
+}
+
+.testimonial .autoplay-progress {
+    position: absolute;
+    right: 28px;
+    bottom: 52px;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--swiper-theme-color);
+}
+
+.testimonial .autoplay-progress svg {
+    --progress: 0;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    stroke-width: 4px;
+    stroke: var(--swiper-theme-color);
+    fill: none;
+    stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+    stroke-dasharray: 125.6;
+    transform: rotate(-90deg);
+}
+
+.swiper-custom-pagination .swiper-pagination-bullet {
+    display: flex;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) {
+    .testimonial .swiper {
+        max-width: 1000px;
+        height: 650px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .testimonial .swiper {
+        max-width: 650px;
+        height: 650px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .testimonial .swiper {
+        max-width: 500px;
+        height: 650px;
+    }
+
+    .testimonial .autoplay-progress {
+        right: 8px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .testimonial .swiper {
+        max-width: 350px;
+        height: 650px;
+    }
+
+    .testimonial .autoplay-progress {
+        right: 8px;
+    }
+}
